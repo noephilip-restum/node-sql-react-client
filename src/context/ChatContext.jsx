@@ -5,7 +5,7 @@ const initialState = {
 
 const ChatContext = React.createContext();
 
-const ChatProvider = ({ children }) => {
+const ChatProvider = ({ children, chat_id }) => {
   const [state, dispatch] = useReducer((state, action) => {
     switch (action.type) {
       case "set-loading":

@@ -142,8 +142,8 @@ export default function MiniDrawer({ children }) {
             {theme.direction === "rtl" ? (
               <ChevronRightIcon />
             ) : (
-              <ChevronLeftIcon />
-            )}
+                <ChevronLeftIcon />
+              )}
           </IconButton>
         </div>
 
@@ -152,18 +152,6 @@ export default function MiniDrawer({ children }) {
         <Divider />
         <List style={{ height: "inherit", overflow: "auto" }}>
           {[
-            "Jules Ballaran",
-            "Jules Ballaran",
-            "Jules Ballaran",
-            "Jules Ballaran",
-            "Jules Ballaran",
-            "Jules Ballaran",
-            "Jules Ballaran",
-            "Jules Ballaran",
-            "Jules Ballaran",
-            "Jules Ballaran",
-            "Jules Ballaran",
-            "Jules Ballaran",
             "Bry ",
             "Bol ",
             "Step ",
