@@ -1,19 +1,23 @@
-import React, { useEffect } from "react";
-import { post } from "utils/api";
-const Routes = () => {
-  useEffect(() => {
-    post("/login", {
-      username: "jomar_bandol",
-      password: "123123"
-    }).then(result => {
-      console.log(result);
-    });
-  }, []);
+import React from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import PrivateRoute from "./PrivateRoute";
+import componentData from "./componentData";
+import { Login } from "components";
 
+const PrivateRoutes = () => {
+  return componentData.map((item, i) => {
+    return <PrivateRoute key={i} {...item} />;
+  });
+};
+
+const Routes = () => {
   return (
-    <div>
-      <h4>Routes</h4>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={Login} />
+        <PrivateRoutes />
+      </Switch>
+    </BrowserRouter>
   );
 };
 
