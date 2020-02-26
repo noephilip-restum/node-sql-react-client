@@ -1,0 +1,8 @@
+.toolbar-text {
+  font-weight: 600;
+  font-size: 18px;
+}
+.toolbar-text-container {
+  display: flex;
+  align-items: center;
+}

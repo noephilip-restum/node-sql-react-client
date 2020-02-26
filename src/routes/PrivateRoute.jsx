@@ -1,10 +1,17 @@
 import React from "react";
 import { Route, withRouter, Redirect } from "react-router-dom";
+import ChatLayout from "layout/ChatLayout";
 function PrivateRoute(props) {
   let { location, history, component: Component, ...rest } = props;
 
   function protectedComponent(componentProps) {
-    return true ? <Component {...componentProps} /> : <Redirect push to="/" />;
+    return true ? (
+      <ChatLayout>
+        <Component {...componentProps} />
+      </ChatLayout>
+    ) : (
+      <Redirect push to="/" />
+    );
   }
 
   return (

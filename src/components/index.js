@@ -1,3 +1,3 @@
-import Chat from "./Chat/Chat";
-import Login from "./Login/Login";
+import Chat from "./chat/Chat";
+import Login from "./login/Login";
 export { Chat, Login };
