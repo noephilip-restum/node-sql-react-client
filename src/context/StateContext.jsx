@@ -1,6 +1,7 @@
 import React, { useReducer } from "react";
 const initialState = {
-  loading: false
+  loading: false,
+  chatmates: []
 };
 
 const StateContext = React.createContext();
@@ -10,6 +11,8 @@ const StateProvider = ({ children }) => {
     switch (action.type) {
       case "set-loading":
         return { ...state, loading: action.payload.loading };
+      case "set-chatmates":
+        return { ...state, chatmates: action.payload.chatmates }
       default:
         return null;
     }

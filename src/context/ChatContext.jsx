@@ -10,6 +10,7 @@ const ChatProvider = ({ children, chat_id }) => {
     switch (action.type) {
       case "set-loading":
         return { ...state, loading: action.payload.loading };
+
       default:
         return null;
     }

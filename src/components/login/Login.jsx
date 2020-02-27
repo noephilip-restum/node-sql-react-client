@@ -1,9 +1,10 @@
 import React from "react";
-
-export default function Login() {
+import LoginForm from "./LoginForm"
+import "./styles.css"
+export default function Login({ history }) {
   return (
     <div>
-      <h1>Login</h1>
+      <LoginForm history={history} />
     </div>
   );
 }
